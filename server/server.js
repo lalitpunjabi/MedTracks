@@ -22,10 +22,10 @@ app.use('/api/medicines', medicineRoutes);
 app.use('/api/intake', intakeRoutes);
 app.use('/api/health-tips', healthTipsRoutes);
 
-app.use(express.static(path.join(__dirname, 'build')));
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+// app.use(express.static(path.join(__dirname, 'build')));
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
 
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
